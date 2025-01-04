@@ -1,0 +1,19 @@
+snippet package "A basic package." b
+package $1;
+endpackage : $1
+endsnippet
+
+snippet class "A basic class."
+class $1;
+endclass : ${1/(\w*).*/$1/}
+endsnippet
+
+snippet function "A basic function."
+function $1;
+endfunction : ${1/(\w*).*/$1/}
+endsnippet
+
+snippet task "A basic task."
+task $1;
+endtask : ${1/(\w*).*/$1/}
+endsnippet

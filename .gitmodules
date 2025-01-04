@@ -1,0 +1,24 @@
+[submodule ".vim/plugged/YouCompleteMe"]
+	path = .vim/plugged/YouCompleteMe
+	url = https://github.com/ycm-core/YouCompleteMe.git
+[submodule ".vim/plugged/tabular"]
+	path = .vim/plugged/tabular
+	url = https://github.com/godlygeek/tabular.git
+[submodule ".vim/plugged/taskwiki"]
+	path = .vim/plugged/taskwiki
+	url = https://github.com/tools-life/taskwiki.git
+[submodule ".vim/plugged/ultisnips"]
+	path = .vim/plugged/ultisnips
+	url = https://github.com/SirVer/ultisnips.git
+[submodule ".vim/plugged/vim-fugitive"]
+	path = .vim/plugged/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule ".vim/plugged/vim-plugin-AnsiEsc"]
+	path = .vim/plugged/vim-plugin-AnsiEsc
+	url = https://github.com/powerman/vim-plugin-AnsiEsc.git
+[submodule ".vim/plugged/vim-taskwarrior"]
+	path = .vim/plugged/vim-taskwarrior
+	url = https://github.com/blindFS/vim-taskwarrior.git
+[submodule ".vim/plugged/vimwiki"]
+	path = .vim/plugged/vimwiki
+	url = https://github.com/vimwiki/vimwiki.git

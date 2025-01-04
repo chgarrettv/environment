@@ -1,0 +1,11 @@
+# Vim Artifacts:
+*.swp
+*.swo
+
+# Directories:
+.vim/view
+
+# Files:
+.vim/.DS_Store
+.vim/.netrwhist
+.vim/plugged/.DS_Store

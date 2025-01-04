@@ -1,0 +1,15 @@
+!regolith.look.path: /usr/share/regolith-look/solarized-dark
+regolith.look.path: /usr/share/regolith-look/lascaille
+
+set_from_resource $wm.binding.inc_gaps wm.binding.inc_gaps none
+set_from_resource $wm.binding.dec_gaps wm.binding.dec_gaps none
+
+# i3-wm.binding.left: a
+# i3-wm.binding.right: d
+# i3-wm.binding.up: w
+# i3-wm.binding.down: s
+
+# i3-wm.binding.move_left: Shift+a
+# i3-wm.binding.move_right: Shift+d
+# i3-wm.binding.move_up: Shift+w
+# i3-wm.binding.move_down: Shift+s
