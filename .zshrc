@@ -1,0 +1,94 @@
+# Startup
+set -o vi
+bindkey "^R" history-incremental-search-backward
+
+# QoL aliases
+alias c='clear'
+alias dog='echo "Woof!"'
+alias sl='echo "Choo choo!"'
+alias u='cd ..'
+alias uu='cd ../..'
+alias uuu='cd ../../..'
+alias uuuu='cd ../../../..'
+alias uuuuu='cd ../../../../..'
+alias ff='find . -iname'
+alias u='cd ..'
+alias eb='exec zsh'
+alias ez='exec zsh'
+alias k='kill %1'
+
+# Git
+alias gita='git add .'
+alias gitai='git add -i'
+alias gitau='git add -u'
+alias gitb='git branch -a'
+alias gitc='git checkout'
+alias gitd='git diff'
+alias gitdc='git diff --cached'
+alias gitcall='git commit -am'
+alias gitcam='git commit --amend -m'
+alias gitcamne='git commit --amend --no-edit'
+alias gitcm='git commit -m'
+alias gitfpa='git fetch --prune --all'
+alias gitl='git log -n 10'
+alias gitp='git push'
+alias gitrbi='git rebase -i'
+alias gits='git status'
+alias sup='git submodule update --init --recursive'
+
+# QGit:
+alias q='qgit&'
+
+# GIO:
+alias g='gio open'
+
+# Makefiles:
+alias m='echo make && make'
+alias ma='echo make all && make all'
+alias mc='echo make clean && make clean'
+alias mca='echo make clean-all && make clean-all'
+alias mcad='echo make clean-all docs && make clean-all docs'
+alias mcao='echo make clean-all open && make clean-all open'
+alias mcd='echo make clean-docs && make clean-docs'
+alias mcf='echo make clean formal && make clean formal'
+alias mcp='echo make clean project && make clean project'
+alias mco='echo make clean open && make clean open'
+alias mct='echo make clean test && make clean test'
+alias md='echo make docs && make docs'
+alias mdv='echo make docs-verbose && make docs-verbose'
+alias mf='echo make formal && make formal'
+alias mh='echo make help && make help'
+alias mp='echo make project && make project'
+alias mo='echo make open && make open'
+alias mt='echo make test && make test'
+alias ms='echo make simulate && make simulate'
+alias mw='echo make waveforms && make waveforms'
+
+# RISC-V
+alias rvasm='riscv64-unknown-elf-asm'
+alias rvobj='riscv64-unknown-elf-objdump'
+alias rvgdb='riscv64-unknown-elf-gdb'
+alias rvgcc='riscv64-unknown-elf-gcc'
+alias rvld='riscv64-unknown-elf-ld'
+
+# TMUX
+alias tmuxs='tmux source ~/.tmux.conf'
+alias tmuxa='tmux attach'
+tmuxp () {
+  #tmux source-file ~/.tmux/$1.conf
+  sh ~/.tmux/$1.sh
+}
+
+# Vim
+alias v='vim -p'
+alias vbrc='vim -p ~/.zshrc'
+alias vzrc='vim -p ~/.zshrc'
+alias vbase='vim -p ~/.tmux/base.sh'
+alias vvrc='vim -p ~/.vimrc'
+alias vrc='vim -p ~/.vimrc'
+alias vtrc='vim -p ~/.tmux.conf'
+alias vi3='vim -p ~/.config/i3/config'
+alias vw='vim -p ~/vimwiki/index.md'
+
+# Startup
+xhost +localhost
