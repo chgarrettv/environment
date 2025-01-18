@@ -9,14 +9,6 @@ export PATH="/home/chgarrettv/.dotnet:$PATH"
 export PATH="/home/chgarrettv/.steam/debian-installation/steamapps/common/Aseprite:$PATH"
 export DOTNET_ROOT=$HOME/.dotnet
 
-# SSH Variables:
-export PCLIP="192.168.0.6"
-export PC="claudegv@192.168.0.6"
-export PILIP="192.168.0.28"
-export PI="chgarrettv@192.168.0.28"
-export NUCIP="192.168.0.33"
-export NUC="chgarrettv@192.168.0.33"
-
 # QoL aliases
 alias c='clear'
 alias dog='echo "Woof!"'
