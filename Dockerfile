@@ -6,6 +6,7 @@ ARG HOME_DIR=/root
 
 # Setup:
 ENV DEBIAN_FRONTEND=noninteractive
+ENV TERM=xterm-256color
 
 # Packages:
 RUN apt-get update \
