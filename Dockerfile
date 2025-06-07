@@ -25,6 +25,7 @@ RUN apt-get update \
 		texlive-fonts-recommended \
 		texlive-fonts-extra \
 		texlive-latex-extra \
+		texlive-science \
 		python3-pygments \
 		evince \
 	&& apt-get clean
@@ -33,11 +34,10 @@ RUN apt-get update \
 RUN apt-get update \
 	&& apt-get install -y \
 		cmake \
-		pip \
 		python3-dev \
 		taskwarrior \
-	&& apt-get clean \
-	&& pip install tasklib
+		python3-tasklib \
+	&& apt-get clean
 
 # Install environment:
 RUN mkdir -p $HOME_DIR/Install \
@@ -52,7 +52,11 @@ RUN mkdir -p $HOME_DIR/Install \
 	&& cd $HOME_DIR/Install \
 	&& git clone https://github.com/tibirna/qgit.git \
 	&& cd qgit \
-	&& apt install -y qt5* qtcreator qtbase5-dev qtdeclarative5-dev \
+	&& apt install -y \
+		qt5* \
+		qtcreator \
+		qtbase5-dev \
+		qtdeclarative5-dev \
 	&& qmake \
 	&& make \
 	&& make install
