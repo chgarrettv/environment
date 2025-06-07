@@ -23,16 +23,15 @@ help:
 	@echo "Usage: make <target>"
 	@echo
 	@echo "Targets:"
-	@echo "  help                : Display this help menu."
-	@echo "  image               : Build the Docker image."
-	@echo "  container           : Create and start a container from the image."
-	@echo "  run                 : Run an existing container."
-	@echo "  install-container   : Install the environment on a Linux container."
-	@echo "  uninstall-container : Uninstall the environment from a Linux container."
-	@echo "  install-linux       : Install the environment on a Linux system."
-	@echo "  uninstall-linux     : Uninstall the environment from a Linux system."
-	@echo "  install-mac         : Install the environment on a macOS system."
-	@echo "  uninstall-mac       : Uninstall the environment from a macOS system."
+	@echo "  help              : Display this help menu."
+	@echo "  image             : Build the Docker image."
+	@echo "  container         : Create and start a container from the image."
+	@echo "  run               : Run an existing container."
+	@echo "  install-container : Install the environment on a Linux container."
+	@echo "  install-linux     : Install the environment on a Linux system."
+	@echo "  install-lite      : Install the lite environment on a Linux system."
+	@echo "  install-mac       : Install the environment on a macOS system."
+	@echo "  uninstall         : Uninstall the environment."
 
 # ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 # image:
@@ -74,16 +73,6 @@ install-container:
 	cd ~/.vim/plugged/YouCompleteMe && python3 install.py --force
 
 # ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-# uninstall-container:
-
-.PHONY: uninstall-container
-uninstall-container:
-	unlink ~/.tmux
-	unlink ~/.tmux.conf
-	unlink ~/.vimrc
-	unlink ~/.vim
-
-# ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 # install-linux:
 
 .PHONY: install-linux
@@ -97,14 +86,17 @@ install-linux:
 	cd ~/.vim/plugged/YouCompleteMe && python3 install.py --force
 
 # ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-# uninstall-linux:
+# install-lite:
 
-.PHONY: uninstall-linux
-uninstall-linux:
-	unlink ~/.tmux
-	unlink ~/.tmux.conf
-	unlink ~/.vimrc
-	unlink ~/.vim
+.PHONY: install-lite
+install-lite:
+	ln -s `pwd`/.tmux ~/.tmux
+	ln -s `pwd`/.tmux.conf ~/.tmux.conf
+	ln -s `pwd`/.vimrc ~/.vimrc
+	ln -s `pwd`/.vim ~/.vim
+	echo "" >> ~/.bashrc
+	echo "source `pwd`/.litebashrc" >> ~/.bashrc
+	cd ~/.vim/plugged/YouCompleteMe && python3 install.py --force
 
 # ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 # install-mac:
@@ -120,10 +112,10 @@ install-mac:
 	cd ~/.vim/plugged/YouCompleteMe && python3 install.py
 
 # ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-# uninstall-mac:
+# uninstall:
 
-.PHONY: uninstall-mac
-uninstall-mac:
+.PHONY: uninstall-linux
+uninstall:
 	unlink ~/.tmux
 	unlink ~/.tmux.conf
 	unlink ~/.vimrc
