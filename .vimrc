@@ -19,7 +19,7 @@ Plug 'tools-life/taskwiki'
 call plug#end()
 
 " Spell Checking.
-set spell
+set nospell
 
 " Basic Global Settings.
 " Numbered lines.
