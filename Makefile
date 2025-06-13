@@ -114,7 +114,7 @@ install-mac:
 # ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 # uninstall:
 
-.PHONY: uninstall-linux
+.PHONY: uninstall
 uninstall:
 	unlink ~/.tmux
 	unlink ~/.tmux.conf
