@@ -59,6 +59,7 @@ set scrolloff=8
 " Split the current window for quickfix commands, but use open windows in the current tab first.
 set switchbuf=useopen,split
 
+set foldmethod=marker
 augroup keep_folds
   autocmd!
   autocmd BufWinLeave *.* mkview
@@ -173,7 +174,7 @@ augroup END
 :nnoremap <leader>t :tabedit 
 :nnoremap <leader>T :tabedit %<cr>
 ":nnoremap <leader>T :argadd \|tab all<left><left><left><left><left><left><left><left>
-:nnoremap <leader>M :tabm 
+:nnoremap <leader>m :tabm 
 ":nnoremap <leader>TF :tabm 0<cr>
 ":nnoremap <leader>TL :tabm 999<cr>
 :nnoremap <leader>x :Tex<cr>
