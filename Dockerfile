@@ -13,10 +13,14 @@ RUN apt-get update \
 	&& apt-get install -y \
 		build-essential \
 		git \
+		linux-tools-generic \
 		make \
 		tmux \
+		usbutils \
 		vim \
-	&& apt-get clean
+		bash-completion \
+	&& apt-get clean \
+	git config pull.rebase true
 
 # LaTeX Packages:
 RUN apt-get update \
