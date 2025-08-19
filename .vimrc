@@ -296,7 +296,7 @@ augroup END
   " To Do List Stuff:
 
 " To Do List Highlighting.
-set iskeyword+=.
+set iskeyword-=.
 
 augroup ToDo
   autocmd!
