@@ -1,5 +1,6 @@
 # Startup
 set -o vi
+. /etc/bash_completion
 
 # General aliases
 alias c='clear'
