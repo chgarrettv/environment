@@ -20,7 +20,7 @@ RUN apt-get update \
 		vim \
 		bash-completion \
 	&& apt-get clean \
-	git config pull.rebase true
+	&& git config --global pull.rebase true
 
 # LaTeX Packages:
 RUN apt-get update \
