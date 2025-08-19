@@ -30,7 +30,7 @@ set ruler
 " Indentation.
 set autoindent
 set smartindent
-set tw=256
+set tw=512
 
 " Convert tabs to spaces.
 set tabstop=4
@@ -282,7 +282,7 @@ augroup END
 :iabbrev adn and
 :iabbrev jsut just
 :iabbrev teh the
-:iabbrev pn \pn{}
+:iabbrev ip \ip{}
 :iabbrev rmw read-modify-write
 :iabbrev Rmw Read-modify-write
 :iabbrev RMW read-modify-write
