@@ -70,8 +70,11 @@ alias rvld='riscv64-unknown-elf-ld'
 alias tmuxs='tmux source ~/.tmux.conf'
 alias tmuxa='tmux attach'
 tmuxp () {
-  #tmux source-file ~/.tmux/$1.conf
-  sh ~/.tmux/$1.sh
+  tmux new-session -s "$1" \; \
+    neww -n "Repository" -c ~/Repositories/$1 \; \
+    neww -n "Editor" -c ~/Repositories/$1 \; \
+      select-layout even-horizontal \; \
+    select-window -t 0 \;
 }
 
 # Vim
