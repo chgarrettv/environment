@@ -27,6 +27,7 @@ RUN apt-get update \
 RUN apt-get update \
 	&& apt-get install -y \
 		pandoc \
+		pandoc-citeproc \
 		python3-pip \
 	&& pip install pandoc-fignos \
 	&& apt-get clean
