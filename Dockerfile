@@ -11,16 +11,25 @@ ENV TERM=xterm-256color
 # Packages:
 RUN apt-get update \
 	&& apt-get install -y \
+		bash-completion \
 		build-essential \
 		git \
 		linux-tools-generic \
 		make \
+		pandoc \
 		tmux \
 		usbutils \
 		vim \
-		bash-completion \
 	&& apt-get clean \
 	&& git config --global pull.rebase true
+
+# Pandoc:
+RUN apt-get update \
+	&& apt-get install -y \
+		pandoc \
+		python3-pip \
+	&& pip install pandoc-fignos \
+	&& apt-get clean
 
 # LaTeX Packages:
 RUN apt-get update \
