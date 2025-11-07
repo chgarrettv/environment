@@ -19,18 +19,22 @@ RUN apt-get update \
 		pandoc \
 		tmux \
 		usbutils \
+		wget \
 		vim \
 	&& apt-get clean \
 	&& git config --global pull.rebase true
 
 # Pandoc:
-RUN apt-get update \
+RUN wget https://github.com/jgm/pandoc/releases/download/3.8.2.1/pandoc-3.8.2.1-1-amd64.deb \
+	&& dpkg -i *.deb \
+	&& rm *.deb \
+	&& apt-get update \
 	&& apt-get install -y \
-		pandoc \
 		pandoc-citeproc \
 		python3-pip \
 	&& pip install pandoc-fignos \
-	&& apt-get clean
+	&& apt-get clean \
+	&& pip install panflute
 
 # LaTeX Packages:
 RUN apt-get update \
