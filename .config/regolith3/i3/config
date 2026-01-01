@@ -68,6 +68,7 @@ assign [class="firefox"            instance="Navigator"]          $browsers
 assign [class="Vivado"             instance="Vivado"]             $vivado
 assign [class="Org.gnome.Nautilus" instance="org.gnome.Nautilus"] $files
 for_window [class="Org.gnome.Nautilus"] floating enable
+for_window [class="Gedit"] floating enable
 assign [class="discord"            instance="discord"]            $messaging
 assign [class="ui-PlanAhead"       instance="ui-PlanAhead"]       $vivado
 
