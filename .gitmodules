@@ -22,3 +22,6 @@
 [submodule ".vim/plugged/vimwiki"]
 	path = .vim/plugged/vimwiki
 	url = https://github.com/vimwiki/vimwiki.git
+[submodule ".vim/plugged/vim-table-mode"]
+	path = .vim/plugged/vim-table-mode
+	url = https://github.com/dhruvasagar/vim-table-mode.git
