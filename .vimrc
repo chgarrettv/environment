@@ -15,6 +15,7 @@ Plug 'vimwiki/vimwiki'
 Plug 'powerman/vim-plugin-AnsiEsc'
 Plug 'blindFS/vim-taskwarrior'
 Plug 'tools-life/taskwiki'
+Plug 'dhruvasagar/vim-table-mode'
 
 call plug#end()
 
@@ -233,6 +234,11 @@ let g:vimwiki_global_ext = 0
 let g:vimwiki_folding = ''
 " TaskWiki:
 let taskwiki_dont_fold = 'yes'
+" vim-table-mode
+":nnoremap <leader>y :TableModeToggle<cr>
+let g:table_mode_toggle_map = '<leader>y'
+let g:table_mode_realign_map = '<leader>Y'
+let g:table_mode_corner='|'
 
 " Local Leader:
 :let maplocalleader = '-'
