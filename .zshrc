@@ -1,6 +1,11 @@
-# Startup
+# Startup:
 set -o vi
 bindkey "^R" history-incremental-search-backward
+autoload -Uz compinit && compinit
+xhost +localhost
+
+# Python:
+export PATH="/opt/homebrew/opt/python@3/libexec/bin:$PATH"
 
 # QoL aliases
 alias c='clear'
@@ -86,12 +91,7 @@ tmuxp () {
 alias v='vim -p'
 alias vbrc='vim -p ~/.zshrc'
 alias vzrc='vim -p ~/.zshrc'
-alias vbase='vim -p ~/.tmux/base.sh'
 alias vvrc='vim -p ~/.vimrc'
 alias vrc='vim -p ~/.vimrc'
 alias vtrc='vim -p ~/.tmux.conf'
-alias vi3='vim -p ~/.config/i3/config'
 alias vw='vim -p ~/vimwiki/index.md'
-
-# Startup
-xhost +localhost
