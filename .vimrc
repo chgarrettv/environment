@@ -195,7 +195,7 @@ set splitright
 :nnoremap <leader>H :split %<cr>
 " Diff mode:
 :nnoremap <leader>6 :vertical diffsplit 
-:nnoremap <leader>U :set nocursorbind<cr>:set noscrollbind<cr>:diffoff<cr>
+:nnoremap <leader>U :set nocursorbind<cr>:set noscrollbind<cr>:diffoff<cr>:set foldcolumn=0<cr>
 " Quickfix menu:
 :nnoremap <leader>q :copen<cr>
 :nnoremap <leader>Q :noautocmd vimgrep /
@@ -302,7 +302,7 @@ augroup END
   " To Do List Stuff:
 
 " To Do List Highlighting.
-set iskeyword-=.
+:set iskeyword-=.
 
 augroup ToDo
   autocmd!
