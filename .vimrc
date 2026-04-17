@@ -19,6 +19,9 @@ Plug 'dhruvasagar/vim-table-mode'
 
 call plug#end()
 
+packadd! matchit
+let b:match_words = '\<begin\>:\<end\>,' . &matchpairs
+
 " Spell Checking.
 set nospell
 
@@ -239,6 +242,7 @@ let taskwiki_dont_fold = 'yes'
 let g:table_mode_toggle_map = '<leader>y'
 let g:table_mode_realign_map = '<leader>Y'
 let g:table_mode_corner='|'
+let g:table_mode_corner_corner='|'
 
 " Local Leader:
 :let maplocalleader = '-'
