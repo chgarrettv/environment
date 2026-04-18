@@ -33,6 +33,9 @@ RUN wget https://github.com/jgm/pandoc/releases/download/3.8.2.1/pandoc-3.8.2.1-
 		pandoc-citeproc \
 		python3-pip \
 	&& pip install pandoc-fignos \
+	&& pip install pandoc-eqnos \
+	&& pip install pandoc-tablenos \
+	&& pip install pandoc-secnos \
 	&& apt-get clean \
 	&& pip install panflute
 
